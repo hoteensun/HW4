@@ -5,12 +5,10 @@
  *Copyright (C) 2015 Maxwell Stow & John Ho
  */
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import CT.*;
+import java.io.*;
+import java.util.ArrayList;
 
 public class HW4 {
 	public static void main(String[] args) throws FileNotFoundException {

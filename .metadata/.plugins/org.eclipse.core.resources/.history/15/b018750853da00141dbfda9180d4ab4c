@@ -5,12 +5,10 @@
  *Copyright (C) 2015 Maxwell Stow & John Ho
  */
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import CT.*;
+import java.io.*;
+import java.util.ArrayList;
 
 public class HW4 {
 	public static void main(String[] args) throws FileNotFoundException {
@@ -88,7 +86,7 @@ public class HW4 {
 					aIndex++;
 				} else { 
 					int uIndex = 0;
-					while(uCounter < sizeOfUList) {
+					while(uIndex < sizeOfUList) {
 						uaArray[uIndex][0] = (uList.get(uCounter));
 						uaArray[uIndex][1] = (aList.get(aCounter));
 					}
