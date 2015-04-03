@@ -92,9 +92,6 @@ public class HW4 {
 			}
 			aCounter++;
 		}
-		System.out.println(Arrays.deepToString(uaArray));
-		System.out.println(Arrays.deepToString(auArray));
-		
 		fileInTxt.close();
 
 	}

@@ -82,19 +82,13 @@ public class HW4 {
 		int uCounter = 0;
 		while (aCounter < sizeOfAList) {
 			
-			while (uCounter < sizeOfUList) {
-				if(aList.get(aCounter) < uList.get(uCounter)) {
-					auArray[aCounter][uCounter] = (aList.get(aCounter) + "," + uList.get(uCounter));
-				} else {
-					uaArray[uCounter][aCounter] = (uList.get(uCounter) + "," + aList.get(aCounter));
-				}
-				uCounter++;
+			if(aList.get(aCounter) < uList.get(uCounter)) {
+				auArray[aCounter][uCounter] = (aList.get(aCounter) + "," + uList.get(uCounter));
 			}
-			aCounter++;
+			
+			
+			uCounter++;
 		}
-		System.out.println(Arrays.deepToString(uaArray));
-		System.out.println(Arrays.deepToString(auArray));
-		
 		fileInTxt.close();
 
 	}
