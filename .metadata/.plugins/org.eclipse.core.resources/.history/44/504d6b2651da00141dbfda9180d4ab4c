@@ -86,9 +86,9 @@ public class HW4 {
 				if(aList.get(aCounter) < uList.get(uCounter)) {
 					auArray[aCounter][0] = (aList.get(aCounter));
 					auArray[aCounter][1] = (uList.get(uCounter));
+							uList.get(uCounter));
 				} else {
-					uaArray[uCounter][0] = (uList.get(uCounter));
-					uaArray[uCounter][1] = (aList.get(aCounter));
+					uaArray[uCounter][aCounter] = (uList.get(uCounter) + "," + aList.get(aCounter));
 				}
 				uCounter++;
 			}

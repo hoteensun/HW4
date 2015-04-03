@@ -70,12 +70,12 @@ public class HW4 {
 		System.out.println(sizeOfGList);
 		System.out.println(sizeOfUList);
 		
-		int [][] auArray = new int[sizeOfAList][2];
-		int [][] cgArray = new int[sizeOfCList][2];
-		int [][] guArray = new int[sizeOfGList][2];
-		int [][] uaArray = new int[sizeOfUList][2];
-		int [][] gcArray = new int[sizeOfGList][2];
-		int [][] ugArray = new int[sizeOfUList][2];		
+		String [][] auArray = new String[sizeOfAList][sizeOfUList];
+		String [][] cgArray = new String[sizeOfCList][sizeOfGList];
+		String [][] guArray = new String[sizeOfGList][sizeOfUList];
+		String [][] uaArray = new String[sizeOfUList][sizeOfAList];
+		String [][] gcArray = new String[sizeOfGList][sizeOfCList];
+		String [][] ugArray = new String[sizeOfUList][sizeOfGList];		
 		
 		
 		int aCounter = 0;
@@ -84,11 +84,9 @@ public class HW4 {
 			
 			while (uCounter < sizeOfUList) {
 				if(aList.get(aCounter) < uList.get(uCounter)) {
-					auArray[aCounter][0] = (aList.get(aCounter));
-					auArray[aCounter][1] = (uList.get(uCounter));
+					auArray[aCounter][uCounter] = (aList.get(aCounter) + "," + uList.get(uCounter));
 				} else {
-					uaArray[uCounter][0] = (uList.get(uCounter));
-					uaArray[uCounter][1] = (aList.get(aCounter));
+					uaArray[uCounter][aCounter] = (uList.get(uCounter) + "," + aList.get(aCounter));
 				}
 				uCounter++;
 			}
