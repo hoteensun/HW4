@@ -1,0 +1,59 @@
+/**
+ * File Name: HW4.java
+ * @author maxwellstow & johnho
+ *
+ *Copyright (C) 2015 Maxwell Stow & John Ho
+ */
+
+import java.util.Scanner;
+import java.io.*;
+
+public class HW4 {
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		/**
+		 * Initializes a scanner to read a file and sets it as null
+		 */
+		
+		Scanner fileInTxt = null;
+		
+		/**
+		 * A Try Catch expression to read the file and set it to the path of the file text.txt
+		 * If the file is not found it executes the catch statement.
+		 */
+		
+		try {
+			fileInTxt = new Scanner (new FileInputStream("DA0260.txt"));
+		}
+		catch(FileNotFoundException e) {
+			System.out.println("File not found.");
+		}
+		String txtFile = fileInTxt.next();
+		System.out.println(txtFile);
+		char[] rnaArray = new char[75];
+		
+		int counter = 0;
+		int gCount = 0;
+		int cCount = 0;
+		int aCount = 0;
+		int uCount = 0;
+		char [][] gArray= new char[75][75];
+		char [][] cArray= new char[75][75];
+		char [][] aArray= new char[75][75];
+		char [][] uArray= new char[75][75];
+		while(counter < 75) {
+			char singleRNA = txtFile.charAt(counter);
+			rnaArray[counter] = singleRNA;
+			switch (singleRNA) {
+			case 'G':
+				gArray[gCount][gCount] = 'G', (counter).toChar();  
+				
+			}
+			counter++;
+		}
+		
+		
+		fileInTxt.close();
+	}
+	
+}

@@ -5,8 +5,10 @@
  *Copyright (C) 2015 Maxwell Stow & John Ho
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
+import java.util.ArrayList;
 
 public class HW4 {
 	public static void main(String[] args) throws FileNotFoundException {
@@ -29,17 +31,34 @@ public class HW4 {
 			System.out.println("File not found.");
 		}
 		String txtFile = fileInTxt.next();
-		
+		System.out.println(txtFile);
 		char[] rnaArray = new char[75];
 		
+		ArrayList<Integer> gList = new ArrayList<Integer>();
+		ArrayList<Integer> cList = new ArrayList<Integer>();
+		ArrayList<Integer> aList = new ArrayList<Integer>();
+		ArrayList<Integer> uList = new ArrayList<Integer>();
 		int counter = 0;
-		
+
 		while(counter < 75) {
 			char singleRNA = txtFile.charAt(counter);
 			rnaArray[counter] = singleRNA;
+			
+			if(singleRNA == 'G') {
+				gList.add(counter);
+			}
+			if(singleRNA == 'C') {
+				cList.add(counter);
+			}
+			if(singleRNA == 'A') {
+				aList.add(counter);
+			}
+			if(singleRNA == 'U') {
+				uList.add(counter);
+			}
 			counter++;
 		}
-		
+	
 		fileInTxt.close();
 	}
 	
